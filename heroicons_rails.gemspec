@@ -3,7 +3,7 @@
 require_relative "lib/heroicons_rails/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "heroicons_rails"
+  spec.name = "heroicons-ror"
   spec.version = HeroiconsRails::VERSION
   spec.authors = ["narciero"]
   spec.email = ["narciero@me.com"]
