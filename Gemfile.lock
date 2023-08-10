@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     heroicons-ror (0.0.0)
-      nokogiri
+      nokogiri (>= 1.6)
 
 GEM
   remote: https://rubygems.org/
