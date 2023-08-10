@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HeroiconsRuby
+module Heroicons
   class Icon
     def initialize(name:, variant:, options: {})
       @name = name

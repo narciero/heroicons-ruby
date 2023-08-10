@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module HeroiconsRuby
+module Heroicons
   VERSION = "0.0.2"
 end
