@@ -20,7 +20,7 @@ class TestHeroiconsRails < Minitest::Test
 
     doc = Nokogiri::XML(icon)
     svg = doc.at_css("svg")
-    assert_equal svg["viewBox"], "0 0 24 24"
+    assert_equal "0 0 24 24", svg["viewBox"]
   end
 
   def test_it_renders_icon_with_variant
@@ -38,5 +38,20 @@ class TestHeroiconsRails < Minitest::Test
   def test_it_renders_nothing_if_icon_variant_is_invalid
     icon = heroicon(@icon_name, variant: :non_existent_variant)
     assert_nil icon
+  end
+
+  def test_it_renders_icon_with_custom_attributes
+    custom_attributes = {
+      title: "icon_title",
+      class: "h-4 w-4"
+    }
+
+    icon = heroicon(@icon_name, variant: :mini, **custom_attributes)
+    doc = Nokogiri::XML(icon)
+    svg = doc.at_css("svg")
+
+    custom_attributes.each do |k, v|
+      assert_equal v, svg[k]
+    end
   end
 end
