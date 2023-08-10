@@ -3,15 +3,15 @@
 require "test_helper"
 require "nokogiri"
 
-class TestHeroiconsRails < Minitest::Test
-  include HeroiconsRails::Helper
+class TestHeroiconsRuby < Minitest::Test
+  include HeroiconsRuby::Helper
 
   def setup
     @icon_name = "arrow-right"
   end
 
   def test_that_it_has_a_version_number
-    refute_nil ::HeroiconsRails::VERSION
+    refute_nil ::HeroiconsRuby::VERSION
   end
 
   def test_it_renders_icon
