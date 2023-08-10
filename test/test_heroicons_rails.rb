@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "nokogiri"
 
 class TestHeroiconsRails < Minitest::Test
   include HeroiconsRails::Helper
@@ -16,6 +17,10 @@ class TestHeroiconsRails < Minitest::Test
   def test_it_renders_icon
     icon = heroicon(@icon_name)
     refute_nil icon
+
+    doc = Nokogiri::XML(icon)
+    svg = doc.at_css("svg")
+    assert_equal svg["viewBox"], "0 0 24 24"
   end
 
   def test_it_renders_icon_with_variant
