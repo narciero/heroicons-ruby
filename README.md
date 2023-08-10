@@ -1,5 +1,7 @@
 # heroicons-rails
 
+[![Gem Version](https://badge.fury.io/rb/heroicons-ror.svg)](https://badge.fury.io/rb/heroicons-ror)
+
 A simple Heroicons helper for Ruby on Rails.
 
 This library is used in production in numerous applications and given that I use TailwindCSS in all my projects, I'm highly incentivized to keep things up to date here. I can also guarantee that semantic versioning will be followed to ensure a stable API.
