@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/heroicons_ruby/version"
+require_relative "lib/heroicons/version"
 
 Gem::Specification.new do |spec|
   spec.name = "heroicons-ruby"

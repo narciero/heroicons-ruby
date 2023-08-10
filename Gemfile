@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in heroicons_ruby.gemspec
+# Specify your gem's dependencies in heroicons-ruby.gemspec
 gemspec
 
 gem "minitest", "~> 5.0"
