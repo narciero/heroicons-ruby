@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "heroicons_rails/version"
+require "heroicons_rails/icon"
 require "heroicons_rails/helper"
 require "heroicons_rails/railtie" if defined?(Rails)
 

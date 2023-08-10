@@ -1,31 +1,17 @@
 # frozen_string_literal: true
 
+require "action_view/helpers" if defined?(Rails)
+
 module HeroiconsRails
   module Helper
     def heroicon(name, variant: :solid, **options)
-      f = file(name.to_s, variant.to_s)
-      return if f.nil?
+      icon = HeroiconsRails::Icon.new(
+        name: name,
+        variant: variant,
+        options: options
+      )
 
-      doc = Nokogiri::XML::Document.parse(f)
-      svg = doc.at_css("svg")
-
-      options.each do |k, v|
-        svg[k.to_s] = v
-      end
-
-      doc.to_html.strip
-    end
-
-    private
-
-    def file(name, variant)
-      path = File.join(ICONS_PATH, variant, "#{name}.svg")
-
-      begin
-        File.open(path)
-      rescue StandardError
-        nil
-      end
+      raw icon.render
     end
   end
 end
