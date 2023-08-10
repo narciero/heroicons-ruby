@@ -18,8 +18,9 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/narciero/heroicons-rails"
   spec.metadata["changelog_uri"] = "https://github.com/narciero/heroicons-rails/blob/main/CHANGELOG.md"
 
-  spec.files = Dir["lib/**/*", "LICENSE.txt", "README.md"]
+  spec.files = Dir["{lib,icons}/**/*", "LICENSE.txt", "README.md"]
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "activesupport", ">= 6.0"
   spec.add_dependency "nokogiri", ">= 1.6"
 end
