@@ -2,7 +2,7 @@
 
 module HeroiconsRuby
   class Icon
-    def initialize(name:, variant:, options:)
+    def initialize(name:, variant:, options: {})
       @name = name
       @variant = variant
       @options = options

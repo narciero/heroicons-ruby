@@ -4,8 +4,6 @@ require "test_helper"
 require "nokogiri"
 
 class TestHeroiconsRuby < Minitest::Test
-  include HeroiconsRuby::Helper
-
   def setup
     @icon_name = "arrow-right"
   end
@@ -14,29 +12,24 @@ class TestHeroiconsRuby < Minitest::Test
     refute_nil ::HeroiconsRuby::VERSION
   end
 
-  def test_it_renders_icon
-    icon = heroicon(@icon_name)
-    refute_nil icon
-
-    doc = Nokogiri::XML(icon)
-    svg = doc.at_css("svg")
-    assert_equal "0 0 24 24", svg["viewBox"]
-  end
-
   def test_it_renders_icon_with_variant
     %i[mini solid outline].each do |variant|
-      icon = heroicon(@icon_name, variant: variant)
+      icon = HeroiconsRuby::Icon.new(name: @icon_name, variant: variant).render
       refute_nil icon
+
+      doc = Nokogiri::XML(icon)
+      svg = doc.at_css("svg")
+      assert_equal variant == :mini ? "0 0 20 20" : "0 0 24 24", svg["viewBox"]
     end
   end
 
   def test_it_renders_nothing_if_icon_name_is_invalid
-    icon = heroicon("non-existent-icon")
+    icon = HeroiconsRuby::Icon.new(name: "non-existent-icon", variant: :solid).render
     assert_nil icon
   end
 
   def test_it_renders_nothing_if_icon_variant_is_invalid
-    icon = heroicon(@icon_name, variant: :non_existent_variant)
+    icon = HeroiconsRuby::Icon.new(name: @icon_name, variant: :non_existent_variant).render
     assert_nil icon
   end
 
@@ -46,7 +39,7 @@ class TestHeroiconsRuby < Minitest::Test
       class: "h-4 w-4"
     }
 
-    icon = heroicon(@icon_name, variant: :mini, **custom_attributes)
+    icon = HeroiconsRuby::Icon.new(name: @icon_name, variant: :mini, options: custom_attributes).render
     doc = Nokogiri::XML(icon)
     svg = doc.at_css("svg")
 
