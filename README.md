@@ -1,8 +1,12 @@
-# heroicons-ror
+# heroicons-rails
 
 A simple Heroicons helper for Ruby on Rails.
 
 This library is used in production in numerous applications and given that I use TailwindCSS in all my projects, I'm highly incentivized to keep things up to date here. I can also guarantee that semantic versioning will be followed to ensure a stable API.
+
+```sh
+bundle add heroicons-ror
+```
 
 ## Usage
 
@@ -21,7 +25,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/heroicons_rails.
+Bug reports and pull requests are welcome on GitHub at https://github.com/narciero/heroicons_rails.
 
 ## License
 
