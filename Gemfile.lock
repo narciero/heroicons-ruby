@@ -2,36 +2,15 @@ PATH
   remote: .
   specs:
     heroicons-ror (0.0.0)
-      actionview
       nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionview (7.0.7)
-      activesupport (= 7.0.7)
-      builder (~> 3.1)
-      erubi (~> 1.4)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activesupport (7.0.7)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      tzinfo (~> 2.0)
     ast (2.4.2)
     base64 (0.1.1)
-    builder (3.2.4)
-    concurrent-ruby (1.2.2)
-    crass (1.0.6)
-    erubi (1.12.0)
-    i18n (1.14.1)
-      concurrent-ruby (~> 1.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    loofah (2.21.3)
-      crass (~> 1.0.2)
-      nokogiri (>= 1.12.0)
     minitest (5.19.0)
     nokogiri (1.15.3-arm64-darwin)
       racc (~> 1.4)
@@ -40,13 +19,6 @@ GEM
       ast (~> 2.4.1)
       racc
     racc (1.7.1)
-    rails-dom-testing (2.2.0)
-      activesupport (>= 5.0.0)
-      minitest
-      nokogiri (>= 1.6)
-    rails-html-sanitizer (1.6.0)
-      loofah (~> 2.21)
-      nokogiri (~> 1.14)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.8.1)
@@ -66,8 +38,6 @@ GEM
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
     ruby-progressbar (1.13.0)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
 
 PLATFORMS

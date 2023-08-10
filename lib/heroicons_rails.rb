@@ -4,7 +4,6 @@ require_relative "heroicons_rails/version"
 require_relative "heroicons_rails/helper"
 require_relative "heroicons_rails/railtie" if defined? Rails
 
-require "active_support"
 require "nokogiri"
 
 module HeroiconsRails
