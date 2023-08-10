@@ -13,6 +13,7 @@ bundle add heroicons-ror
 ## Usage
 
 ```erb
+<!-- Render plain Heroicon SVG -->
 <%= heroicon "arrow-right", variant: :mini %>
 
 <!-- You can provide any HTML attributes you want for the rendered SVG -->
