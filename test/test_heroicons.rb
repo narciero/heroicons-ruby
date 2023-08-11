@@ -57,4 +57,8 @@ class TestHeroicons < Minitest::Test
 
     assert_equal :mini, Heroicons.config.variant
   end
+
+  # def test_it_renders_via_helper
+  #   heroicon "check"
+  # end
 end
