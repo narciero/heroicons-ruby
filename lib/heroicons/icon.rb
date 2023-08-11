@@ -15,7 +15,7 @@ module Heroicons
       svg = doc.at_css("svg")
 
       @options.each do |k, v|
-        svg[k.to_s] = v
+        svg[dasherize(k.to_s)] = v
       end
 
       doc.to_html.strip
@@ -31,6 +31,10 @@ module Heroicons
 
     def path
       File.join(ICONS_PATH, @variant.to_s, "#{@name}.svg")
+    end
+
+    def dasherize(s)
+      s.gsub(/_/, "-")
     end
   end
 end

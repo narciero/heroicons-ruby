@@ -35,17 +35,22 @@ class TestHeroicons < Minitest::Test
 
   def test_it_renders_icon_with_custom_attributes
     custom_attributes = {
-      title: "icon_title",
-      class: "h-4 w-4"
+      title: "title",
+      class: "h-4 w-4",
+      stroke_width: "2%",
+      "fill-opacity": 0.7,
+      viewBox: "0 0 50 50"
     }
 
     icon = Heroicons::Icon.new(name: @icon_name, variant: :mini, options: custom_attributes).render
     doc = Nokogiri::XML(icon)
     svg = doc.at_css("svg")
 
-    custom_attributes.each do |k, v|
-      assert_equal v, svg[k]
-    end
+    assert_equal "title", svg["title"]
+    assert_equal "h-4 w-4", svg["class"]
+    assert_equal "2%", svg["stroke-width"]
+    assert_equal "0.7", svg["fill-opacity"]
+    assert_equal "0 0 50 50", svg["viewBox"]
   end
 
   def test_it_configures_variant
