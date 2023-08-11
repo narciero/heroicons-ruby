@@ -48,7 +48,7 @@ class TestHeroicons < Minitest::Test
     end
   end
 
-  def test_config_variant
+  def test_it_configures_variant
     assert_equal :solid, Heroicons.config.variant
 
     Heroicons.configure do |config|
