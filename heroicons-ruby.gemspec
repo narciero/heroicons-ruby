@@ -12,9 +12,9 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.metadata = {
-    homepage_uri: spec.homepage,
-    source_code_uri: "https://github.com/narciero/heroicons-ruby",
-    changelog_uri: "https://github.com/narciero/heroicons-ruby/blob/main/CHANGELOG.md"
+    "homepage_uri" => spec.homepage,
+    "source_code_uri" => "https://github.com/narciero/heroicons-ruby",
+    "changelog_uri" => "https://github.com/narciero/heroicons-ruby/blob/main/CHANGELOG.md"
   }
 
   spec.files = Dir["{lib,icons}/**/*", "LICENSE.txt", "README.md", "CHANGELOG.md"]

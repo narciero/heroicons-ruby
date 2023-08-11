@@ -14,13 +14,23 @@ bundle add heroicons-ruby
 
 ```erb
 <!-- Render plain Heroicon SVG -->
+<%= heroicon "arrow-right" %>
+
+<!-- Use non-default variant -->
 <%= heroicon "arrow-right", variant: :mini %>
 
-<!-- You can provide any HTML attributes you want for the rendered SVG -->
-<%= heroicon "arrow-right", variant: :mini, class: "h-4 w-4", fill: "none" %>
+<!-- Provide HTML attributes for the rendered SVG -->
+<%= heroicon "arrow-right", class: "h-4 w-4", fill: "none" %>
 ```
 
-Valid `:variant` values are `%i[mini solid outline]`
+Valid `variant` values are `%i[mini solid outline]`. The default variant is `solid` however that default can be changed using:
+
+```ruby
+# config/initializers/heroicons.rb
+Heroicons.configure do |config|
+  config.variant = :mini
+end
+```
 
 ### Rationale
 

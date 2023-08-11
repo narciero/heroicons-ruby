@@ -14,3 +14,6 @@ Style/Documentation:
 
 Layout/LineLength:
   Max: 120
+
+Naming/FileName:
+  Enabled: false

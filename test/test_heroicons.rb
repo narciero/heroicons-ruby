@@ -47,4 +47,14 @@ class TestHeroicons < Minitest::Test
       assert_equal v, svg[k]
     end
   end
+
+  def test_config_variant
+    assert_equal :solid, Heroicons.config.variant
+
+    Heroicons.configure do |config|
+      config.variant = :mini
+    end
+
+    assert_equal :mini, Heroicons.config.variant
+  end
 end
