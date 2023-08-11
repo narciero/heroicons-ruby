@@ -1,7 +1,7 @@
 # heroicons-ruby
 
 [![Gem Version](https://badge.fury.io/rb/heroicons-ruby.svg)](https://badge.fury.io/rb/heroicons-ruby)
-[![Heroicons Version](https://img.shields.io/badge/v2.0.18-heroicons-8B5CF6)](https://heroicons.com)
+[![Heroicons Version](https://img.shields.io/badge/heroicons-v2.0.18-8B5CF6)](https://heroicons.com)
 
 A simple Heroicons helper for Ruby on Rails.
 
