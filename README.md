@@ -1,10 +1,9 @@
 # heroicons-ruby
 
 [![Gem Version](https://badge.fury.io/rb/heroicons-ruby.svg)](https://badge.fury.io/rb/heroicons-ruby)
+[![Heroicons Version](https://img.shields.io/badge/v2.0.18-heroicons-8B5CF6)](https://heroicons.com)
 
 A simple Heroicons helper for Ruby on Rails.
-
-This library is used in production in numerous applications and given that I use TailwindCSS in all my projects, I'm highly incentivized to keep things up to date here. I can also guarantee that semantic versioning will be followed to ensure a stable API.
 
 ```sh
 bundle add heroicons-ruby
@@ -45,6 +44,7 @@ The key differences between `heroicons-ruby` and others are:
   ```erb
   <%= heroicon "check", class: "h-4 w-4" %>
   ```
+- This library is used in production in numerous applications and given that I use TailwindCSS in all my projects, I'm highly incentivized to keep things up to date here. I can also guarantee that semantic versioning will be followed to ensure a stable API.
 
 ## Development
 
