@@ -22,6 +22,20 @@ bundle add heroicons-ruby
 
 Valid `:variant` values are `%i[mini solid outline]`
 
+### Rationale
+
+> Don't libraries already exist for this? Why make another?
+
+The key differences between `heroicons-ruby` and others are:
+
+- Can be used without Rails (no need to pull in entire Rails dependency if not needed)
+- Renders exact Heroicons SVG identical to those found in [the official repo](https://github.com/tailwindlabs/heroicons/tree/master/optimized). No transformations / differences from the official SVGs to worry about.
+  - This also makes it very easy to keep this library up to date. On each new Heroicons release, all that needs to be done is a copy-paste of the official icons to the `/icons` folder.
+- Very thin API wrapper around `<svg>` making it easy and concise to configure HTML attributes.
+  ```erb
+  <%= heroicon "check", class: "h-4 w-4" %>
+  ```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
