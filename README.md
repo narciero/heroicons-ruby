@@ -22,12 +22,23 @@ bundle add heroicons-ruby
 <%= heroicon "arrow-right", class: "h-4 w-4", fill: "none" %>
 ```
 
+
+## Configuration
 Valid `variant` values are `%i[mini solid outline]`. The default variant is `solid` however that default can be changed using:
 
 ```ruby
 # config/initializers/heroicons.rb
 Heroicons.configure do |config|
   config.variant = :mini
+end
+```
+
+If you would like to specify default HTML attributes (eg. `class="h-4 w-4"`) for a given `variant`, you can configure that like so:
+
+```ruby
+# config/initializers/heroicons.rb
+Heroicons.configure do |config|
+  config.attributes[:mini] = { class: "h-4 w-4" }
 end
 ```
 

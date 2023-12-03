@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    heroicons-ruby (1.0.0)
+    heroicons-ruby (2.0.0.pre.beta.1)
       activesupport (>= 6.0)
       nokogiri (>= 1.6)
 

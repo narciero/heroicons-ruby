@@ -42,7 +42,7 @@ class TestHeroicons < Minitest::Test
       viewBox: "0 0 50 50"
     }
 
-    icon = Heroicons::Icon.new(name: @icon_name, variant: :mini, options: custom_attributes).render
+    icon = Heroicons::Icon.new(name: @icon_name, variant: :mini, attributes: custom_attributes).render
     doc = Nokogiri::XML(icon)
     svg = doc.at_css("svg")
 
@@ -61,6 +61,16 @@ class TestHeroicons < Minitest::Test
     end
 
     assert_equal :mini, Heroicons.config.variant
+  end
+
+  def test_it_configures_attributes
+    assert_equal({}, Heroicons.config.attributes)
+
+    Heroicons.configure do |config|
+      config.attributes[:solid] = { class: "h-6 w-6" }
+    end
+
+    assert_equal({ solid: { class: "h-6 w-6" } }, Heroicons.config.attributes)
   end
 
   # def test_it_renders_via_helper
