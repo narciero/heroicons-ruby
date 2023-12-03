@@ -2,10 +2,10 @@
 
 module Heroicons
   class Icon
-    def initialize(name:, variant:, options: {})
+    def initialize(name:, variant:, attributes: {})
       @name = name
       @variant = variant
-      @options = options
+      @attributes = attributes
     end
 
     def render
@@ -14,7 +14,7 @@ module Heroicons
       doc = Nokogiri::XML::Document.parse(file)
       svg = doc.at_css("svg")
 
-      @options.each do |k, v|
+      @attributes.each do |k, v|
         svg[dasherize(k.to_s)] = v
       end
 

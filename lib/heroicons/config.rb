@@ -2,10 +2,11 @@
 
 module Heroicons
   class Config
-    attr_accessor :variant
+    attr_accessor :variant, :attributes
 
     def initialize
       @variant = :solid
+      @attributes = Hash.new { |_hash, _key| {} }
     end
   end
 
