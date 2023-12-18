@@ -1,7 +1,7 @@
 # heroicons-ruby
 
 [![Gem Version](https://badge.fury.io/rb/heroicons-ruby.svg)](https://badge.fury.io/rb/heroicons-ruby)
-[![Heroicons Version](https://img.shields.io/badge/heroicons-v2.0.18-8B5CF6)](https://heroicons.com)
+[![Heroicons Version](https://img.shields.io/badge/heroicons-v2.1.0-8B5CF6)](https://heroicons.com)
 
 A simple Heroicons helper for Ruby on Rails.
 
@@ -24,7 +24,7 @@ bundle add heroicons-ruby
 
 
 ## Configuration
-Valid `variant` values are `%i[mini solid outline]`. The default variant is `solid` however that default can be changed using:
+Valid `variant` values are `%i[micro mini solid outline]`. The default variant is `solid` however that default can be changed using:
 
 ```ruby
 # config/initializers/heroicons.rb

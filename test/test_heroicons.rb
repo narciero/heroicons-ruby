@@ -13,13 +13,20 @@ class TestHeroicons < Minitest::Test
   end
 
   def test_it_renders_icon_with_variant
-    %i[mini solid outline].each do |variant|
+    view_boxes = {
+      micro: "0 0 16 16",
+      mini: "0 0 20 20",
+      solid: "0 0 24 24",
+      outline: "0 0 24 24"
+    }
+
+    %i[micro mini solid outline].each do |variant|
       icon = Heroicons::Icon.new(name: @icon_name, variant: variant).render
       refute_nil icon
 
       doc = Nokogiri::XML(icon)
       svg = doc.at_css("svg")
-      assert_equal variant == :mini ? "0 0 20 20" : "0 0 24 24", svg["viewBox"]
+      assert_equal view_boxes[variant], svg["viewBox"]
     end
   end
 
